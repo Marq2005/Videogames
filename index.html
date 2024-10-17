@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Videojuegos Neón</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="neon-text">Tienda de Videojuegos Neón</h1>
+        <nav>
+            <ul>
+                <li><a href="#categorias" class="neon-link">Categorías</a></li>
+                <li><a href="#productos" class="neon-link">Productos</a></li>
+                <li><a href="#contacto" class="neon-link">Contacto</a></li>
+            </ul>
+        </nav>
+        <button id="carrito-btn" class="neon-button">Carrito <span id="carrito-cantidad">0</span></button>
+    </header>
+
+    <main>
+        <section id="categorias">
+            <h2 class="neon-text">Categorías</h2>
+            <div class="categoria-container">
+                <button class="categoria neon-button">Acción</button>
+                <button class="categoria neon-button">Aventura</button>
+                <button class="categoria neon-button">Deportes</button>
+                <button class="categoria neon-button">Estrategia</button>
+                <button class="categoria neon-button">Todos</button>
+            </div>
+        </section>
+
+        <section id="productos">
+            <h2 class="neon-text">Productos</h2>
+            <div class="productos-container">
+                <!-- Los productos se agregarán dinámicamente con JavaScript -->
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2 class="neon-text">Contacto</h2>
+            <form id="contacto-form" class="neon-form">
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Mensaje" required></textarea>
+                <button type="submit" class="neon-button">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <div id="carrito-modal" class="modal">
+        <div class="modal-content">
+            <span class="cerrar">&times;</span>
+            <h2 class="neon-text">Carrito de Compras</h2>
+            <div id="carrito-items"></div>
+            <p>Total: $<span id="carrito-total">0</span></p>
+            <button id="comprar-btn" class="neon-button">Comprar</button>
+        </div>
+    </div>
+
+    <footer>
+        <p class="neon-text">&copy; 2024 Tienda de Videojuegos Neón. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
